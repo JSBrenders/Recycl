@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+        <property name="dialect">org.hibernate.dialect.Oracle12cDialect</property>
+        <property name="connection.username">rlille</property>
+        <property name="connection.password">rlille</property>
+
+        <property name="show_sql">true</property>
+        <mapping class="dataBase.rlille.CamionEntityLille"/>
+        <mapping class="dataBase.rlille.CentretraitementEntityLille"/>
+        <mapping class="dataBase.rlille.DemandeEntityLille"/>
+        <mapping class="dataBase.rlille.DetaildemandeEntityLille"/>
+        <mapping class="dataBase.rlille.DetaildepotEntityLille"/>
+        <mapping class="dataBase.rlille.EmployeEntityLille"/>
+        <mapping class="dataBase.rlille.EntrepriseEntityLille"/>
+        <mapping class="dataBase.rlille.FonctionEntityLille"/>
+        <mapping class="dataBase.rlille.TourneeEntityLille"/>
+        <mapping class="dataBase.rlille.TypedechetEntityLille"/>
+
+
+    </session-factory>
+</hibernate-configuration>

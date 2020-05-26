@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+<error-page>
+    <location>/WEB-INF/jsp/common/error.jsp</location>
+</error-page>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>filtreDateDemandes</servlet-name>
+        <servlet-class>classes.servlets.dateDemande</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>filtreDateDemandes</servlet-name>
+        <url-pattern>/filtreDateDemandes</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>affectationDemandes</servlet-name>
+        <servlet-class>classes.servlets.affectationDemandes</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>affectationDemandes</servlet-name>
+        <url-pattern>/affectationDemandes</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>filtreDateDechets</servlet-name>
+        <servlet-class>classes.servlets.dateDechets</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>filtreDateDechets</servlet-name>
+        <url-pattern>/filtreDateDechets</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Index</servlet-name>
+        <servlet-class>classes.servlets.Index</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Index</servlet-name>
+        <url-pattern/>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>filtreEmploye</servlet-name>
+        <servlet-class>classes.servlets.filtreEmploye</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>filtreEmploye</servlet-name>
+        <url-pattern>/filtreEmploye</url-pattern>
+    </servlet-mapping>
+
+    <mime-mapping>
+        <extension>ico</extension>
+        <mime-type>image/x-icon</mime-type>
+    </mime-mapping>
+
+</web-app>

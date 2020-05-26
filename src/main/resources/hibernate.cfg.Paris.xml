@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+        <property name="dialect">org.hibernate.dialect.Oracle12cDialect</property>
+        <property name="connection.username">rparis</property>
+        <property name="connection.password">rparis</property>
+        <property name="show_sql">true</property>
+        <mapping class="dataBase.rparis.CamionEntityParis"/>
+        <mapping class="dataBase.rparis.CentretraitementEntityParis"/>
+        <mapping class="dataBase.rparis.DemandeEntityParis"/>
+        <mapping class="dataBase.rparis.DetaildemandeEntityParis"/>
+        <mapping class="dataBase.rparis.DetaildepotEntityParis"/>
+        <mapping class="dataBase.rparis.EmployeEntityParis"/>
+        <mapping class="dataBase.rparis.EntrepriseEntityParis"/>
+        <mapping class="dataBase.rparis.TourneeEntityParis"/>
+        <mapping class="dataBase.rparis.TypedechetEntityParis"/>
+
+
+    </session-factory>
+</hibernate-configuration>
