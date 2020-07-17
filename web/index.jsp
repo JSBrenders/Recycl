@@ -5,17 +5,14 @@
 <%@ page import="java.time.LocalDate" %>
 <%@ page import="dataBase.rlille.EntrepriseEntityLille" %>
 <%@ page import="dataBase.rparis.EntrepriseEntityParis" %>
-<%@ page import="dataBase.rparis.TypedechetEntityParis" %>
-<%@ page import="dataBase.rparis.CentretraitementEntityParis" %>
-<%@ page import="dataBase.rlille.CentretraitementEntityLille" %>
-<%@ page import="dataBase.rlille.TypedechetEntityLille" %>
+
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <%--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">--%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/styles.css">
     <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/icone.ico" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/switch.css">
 
@@ -146,12 +143,12 @@
                 <%--  Interface --%>
 
 
-                <div id="interface" class="haut">
+                <div id="interface" >
                     <h3 class="haut mb-5">Recherche par centre de traitement pour un type de déchet</h3>
                     <%@ include file="WEB-INF/jsp/common/dechetParSite.jsp" %>
                     <div id="resultatDechetSite" hidden>Quantite totale : <span id="resultQte"></span></div>
                     <div class="mb-5"></div>
-                    <h3 class="haut mb-5">Recherche nationale pour un type de déchet</h3>
+                    <h3 class="mt-3 mb-5">Recherche nationale pour un type de déchet</h3>
                     <%@ include file="WEB-INF/jsp/common/dechetsNational.jsp" %>
                     <div id="resultatDechetNational" hidden>Quantité totale : <span id="resultQteNational"></span></div>
                 </div>

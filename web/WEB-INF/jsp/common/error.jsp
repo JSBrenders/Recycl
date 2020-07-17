@@ -11,6 +11,6 @@
     <title>Erreur</title>
 </head>
 <body>
-    La page demandée est introuvable
+    Désolé, La page demandée est introuvable
 </body>
 </html>

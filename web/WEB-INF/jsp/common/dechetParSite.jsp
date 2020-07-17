@@ -1,6 +1,8 @@
+<%@ page import="dataBase.rlille.CentretraitementEntityLille" %>
+<%@ page import="dataBase.rparis.CentretraitementEntityParis" %>
 <div id="interfaceDechets">
     <%-- Sélection d'un centre --%>
-    <select  name="centre" id="centre">
+    <select  name="centre" id="centre" class="form-control w-50 mb-3">
         <option value="" disabled selected>Veuillez choisir un centre de traitement</option>
         <%
             if(requete != null && requete.centres.size() > 0) {
@@ -31,8 +33,7 @@
     </select>
 
     <%--    Sélection d'un type de déchet    --%>
-    <label>
-        <select name="dechet" id="dechet">
+        <select name="dechet" id="dechet" class="form-control w-50 mb-3">
             <option value="" disabled selected>Veuillez choisir un type de dechet</option>
             <%
                 if(requete != null && requete.dechets.size() > 0) {
@@ -64,14 +65,19 @@
 
             %>
         </select>
-    </label>
 
-    <label>
-        <input type="date" id="datestart" value="<%= date1%>"%>
-    </label>
-    <label>
-        <input type="date" id="dateend" value="<%= date2%>"%>
-    </label>
+            <label class="my-2 form-row ml-1">
+                Periode :
+            </label>
+            <label>
+                <input type="date" id="datestart" class="form-control mr-3" value="<%= date1%>"%>
+            </label>
+
+            <label>
+                <input type="date" id="dateend" class="form-control" value="<%= date2%>"%>
+            </label>
+
+
 
 
 </div>

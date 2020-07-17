@@ -1,7 +1,16 @@
 (function($) {
     jQuery(document).ready(function() {
         jQuery("#interfaceDechets > *").change(function() {
-            let promise = jQuery.get('/dechetParSite?ville=' + $("#ville option:selected").val() + '&noCentre=' + $("#centre option:selected").val() + '&noDechet=' + $("#dechet option:selected").val() + '&dateStart=' + $("#datestart").val() + '&dateEnd=' + $("#dateend").val())
+            let ville;
+            if(jQuery("#check"))
+            {
+                ville = "Lille"
+            }
+            else
+            {
+                ville = "Paris"
+            }
+            let promise = jQuery.get('/dechetParSite?ville=' + ville + '&noCentre=' + $("#centre option:selected").val() + '&noDechet=' + $("#dechet option:selected").val() + '&dateStart=' + $("#datestart").val() + '&dateEnd=' + $("#dateend").val())
                 .then(function(response) {
 
                     if(response !== "") {

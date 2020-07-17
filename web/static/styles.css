@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
     padding-bottom: 2.5rem;
 }
 
-#footer {
+.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
